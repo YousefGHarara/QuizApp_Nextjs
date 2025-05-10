@@ -1,6 +1,7 @@
 'use client'
 
 import IButton from '@/components/common/IButton';
+import Loading from '@/components/common/Loading';
 import { useQuiz } from '@/context/CategoryProvider';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
@@ -26,7 +27,7 @@ const SwitchButton = () => {
     return (
         <>
             {isLoading ? (
-                <p className="text-lg animate-pulse">Loading questions...</p>
+                <Loading />
             ) : (
                 <>
                     <IButton onClick={handleRouter}>Let&apos;s Start</IButton>
