@@ -5,9 +5,9 @@ import React from 'react';
 
 const Page = () => {
 
-    const {categories, error, loading} = UseQuestion();
+    const {categories, error, isLoading} = UseQuestion();
 
-    if(loading) return <p>Loading ....</p>
+    if(isLoading) return <p>Loading ....</p>
 
     if(error) return <p>Error ...</p>
 
